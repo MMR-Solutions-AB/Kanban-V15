@@ -1,0 +1,53 @@
+.board {
+  width: 100%;
+  padding: 24px 0px 0px 24px;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 280px);
+
+
+}
+
+@media screen and (max-width: 800px) {
+  .board {
+    padding: 0;
+    margin: 20px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.column-grid {
+  display: flex;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, minmax(1fr, 280px));
+}
+
+.board-column {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 15px;
+}
+.board-title {
+  display: flex;
+  gap: 12px;
+  color: #7f90a4;
+  &-icon {
+    width: 15px;
+    height: 15px;
+    background-color: orange;
+    border-radius: 50%;
+  }
+}
+
+.Todo {
+  background-color: #49c4e5;
+}
+.Doing {
+  background-color: #8471f2;
+}
+.Done {
+  background-color: #67e2ae;
+}

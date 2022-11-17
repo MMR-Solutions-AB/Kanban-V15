@@ -1,0 +1,36 @@
+.create-project-modal {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  input {
+    width: 100%;
+    resize: none;
+    background-color: transparent;
+    padding: 8px 16px;
+    border: 1px solid var(--bg-lines);
+    border-radius: 6px;
+    outline: none;
+    color: var(--text);
+    display: block;
+
+    &::placeholder {
+      color: var(--bg-lines);
+    }
+  }
+  button {
+    padding: 8px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    &:hover {
+      filter: brightness(1.1);
+    }
+    &:active {
+      filter: brightness(0.9);
+    }
+  }
+}
