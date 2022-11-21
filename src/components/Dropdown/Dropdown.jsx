@@ -3,8 +3,9 @@ import './Dropdown.scss'
 import { useProject } from '../../context/ProjectContext'
 import Closelogo from '../../assets/icon-cross.svg'
 import Links from '../Links/Links'
+
 const Dropdown = ({ setShowDropdown }) => {
-    const { projects, getCurrent } = useProject()
+    const { projects } = useProject()
 
     return (
         <aside className={`dropdown`}>

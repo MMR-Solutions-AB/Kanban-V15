@@ -1,13 +1,12 @@
 import React from 'react'
 import './Board.scss'
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd'
-import { v4 as uuidv4 } from 'uuid'
 import Ticket from '../Ticket/Ticket'
-import { useState } from 'react'
 import { useProject } from '../../context/ProjectContext'
 
 const Board = () => {
     const { current, setCurrent } = useProject()
+
     function onDragend(result) {
         if (!result.destination) return
         /* Dragg Object */
@@ -56,6 +55,8 @@ const Board = () => {
             }))
         }
     }
+
+    // return <div className="board"></div>
 
     return (
         <div className="board">

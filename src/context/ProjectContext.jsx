@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react'
-import { useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import { createContext } from 'react'
 import { projectsData } from './projects-data'
 

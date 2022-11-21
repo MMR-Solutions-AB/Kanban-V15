@@ -6,6 +6,7 @@
     max-width: 280px;
     background-color: var(--bg-gray);
     width: 100%;
+    flex-shrink: 0;
 
     p {
         padding: 15px 30px;
