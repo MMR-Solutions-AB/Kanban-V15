@@ -6,7 +6,7 @@ import BoardIcon from '../../assets/icon/IconBoard'
 const Links = () => {
     const [isOpen, setIsOpen] = useState(false)
 
-    const { projects, getCurrent, current } = useProject()
+    const { projects, currentProject, changeBoard } = useProject()
 
     return (
         <nav className="nav">
@@ -14,10 +14,12 @@ const Links = () => {
                 {projects.map((link, idx) => {
                     return (
                         <li
-                            onClick={() => getCurrent(link.id)}
+                            onClick={() => changeBoard(idx)}
                             key={idx}
                             className={
-                                current.title == link.title ? 'active' : ''
+                                currentProject.title == link.title
+                                    ? 'active'
+                                    : ''
                             }
                         >
                             <BoardIcon fill="#828FA3" />

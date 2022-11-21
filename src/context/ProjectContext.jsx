@@ -7,28 +7,22 @@ const ProjectContext = createContext({})
 export function useProject() {
     return useContext(ProjectContext)
 }
+
 const ProjectContextProvider = ({ children }) => {
     const [projects, setProjects] = useState(projectsData)
-    const [current, setCurrent] = useState(projectsData[0])
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const currentProject = projectsData[currentIndex]
+
+    console.log(projects)
 
     const addTicket = (ticket) => {
-        setCurrent((prev) => ({
-            ...prev,
-            board: {
-                ...prev.board,
-                stage1: {
-                    ...prev.board.stage1,
-                    items: [...prev.board.stage1.items, ticket],
-                },
-            },
-        }))
+        projects[currentIndex].board.stage1.items.push(ticket)
+        // make sure we rerender
+        setProjects([...projects])
     }
 
-    const getCurrent = (id) => {
-        const newCurrent = projects.find((item) => {
-            return item.id == id
-        })
-        setCurrent(newCurrent)
+    const changeBoard = (index) => {
+        setCurrentIndex(index)
     }
 
     const addNewProject = (title) => {
@@ -53,11 +47,16 @@ const ProjectContextProvider = ({ children }) => {
         setProjects((prev) => [...prev, data])
     }
 
+    const changeCurrentBoard = (newData) => {
+        projects[currentIndex].board = newData
+        setProjects([...projects])
+    }
+
     const value = {
-        current,
-        setCurrent,
+        changeBoard,
+        currentProject,
+        changeCurrentBoard,
         projects,
-        getCurrent,
         addTicket,
         addNewProject,
     }
