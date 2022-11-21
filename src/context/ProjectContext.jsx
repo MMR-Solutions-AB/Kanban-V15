@@ -11,9 +11,7 @@ export function useProject() {
 const ProjectContextProvider = ({ children }) => {
     const [projects, setProjects] = useState(projectsData)
     const [currentIndex, setCurrentIndex] = useState(0)
-    const currentProject = projectsData[currentIndex]
-
-    console.log(projects)
+    const currentProject = projects[currentIndex]
 
     const addTicket = (ticket) => {
         projects[currentIndex].board.stage1.items.push(ticket)
@@ -45,6 +43,7 @@ const ProjectContextProvider = ({ children }) => {
             },
         }
         setProjects((prev) => [...prev, data])
+        setCurrentIndex(projects.length)
     }
 
     const changeCurrentBoard = (newData) => {

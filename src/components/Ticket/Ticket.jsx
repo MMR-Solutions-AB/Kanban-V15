@@ -21,7 +21,7 @@ const Ticket = ({ provided, snapshot, item }) => {
             <ul>
                 {showsubtasks &&
                     item.tasks.map((item) => {
-                        return <li>{item}</li>
+                        return <li key={item}>{item}</li>
                     })}
             </ul>
         </div>
