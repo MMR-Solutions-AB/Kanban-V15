@@ -24,6 +24,8 @@ const ProjectContextProvider = ({ children }) => {
     }
 
     const addNewProject = (title) => {
+        if (!title) return
+
         const data = {
             title: title,
             id: projects.length + 1,
