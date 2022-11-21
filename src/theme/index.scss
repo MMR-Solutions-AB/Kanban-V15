@@ -1,70 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
 
 * {
-  box-sizing: border-box;
-  margin: 0;
+    box-sizing: border-box;
+    margin: 0;
 }
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  --primary: #635fc7;
-  --primary-dimmed: #a8a4ff;
-  --secondary: #ea5555;
-  --secondary-dimmed: #ff9898;
-  --bg: #000112;
-  --bg-dark-gray: #20212c;
-  --bg-gray: #2b2c37;
-  --bg-lines: #3e3f4e;
-  --text-gray: #828fa3;
-  --text-lines: #e4ebfa;
-  --text-dimmed: #f4f7fd;
-  --text: #ffffff;
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    --primary: #635fc7;
+    --primary-dimmed: #a8a4ff;
+    --secondary: #ea5555;
+    --secondary-dimmed: #ff9898;
+    --bg: #000112;
+    --bg-dark-gray: #20212c;
+    --bg-gray: #2b2c37;
+    --bg-lines: #3e3f4e;
+    --text-gray: #828fa3;
+    --text-lines: #e4ebfa;
+    --text-dimmed: #f4f7fd;
+    --text: #ffffff;
 }
 
 body {
-  background-color: var(--bg-dark-gray);
+    background-color: var(--bg-dark-gray);
 }
 
 main {
-  display: flex;
-  width: 100%;
+    display: flex;
+    width: 100%;
 }
 
 .heading-xl {
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
 }
 .heading-l {
-  font-size: 18px;
-  line-height: 23px;
-  font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 700;
 }
 .heading-m {
-  font-size: 15px;
-  line-height: 19px;
-  font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 700;
 }
 .heading-s {
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 700;
-  letter-spacing: 2.4px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
 }
 
 .body-l {
-  font-size: 13px;
-  line-height: 23px;
-  font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+    font-weight: 500;
 }
 
 .body-m {
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
 }

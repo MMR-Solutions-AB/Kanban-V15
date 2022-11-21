@@ -1,59 +1,57 @@
-
 .nav {
     ul {
-      text-decoration: none;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      li {
-        padding: 15px 30px;
-        width: 85%;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-        display: flex;
-        align-items: center;
-        line-height: 19px;
-        gap: 15px;
-        color: var(--text-gray);
-        font-weight: bold;
-        font-size: 14px;
-        letter-spacing: 0.5px;
-        cursor: pointer;
-        svg {
-          fill: var(--text-gray);
+        text-decoration: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            padding: 15px 30px;
+            width: 85%;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            display: flex;
+            align-items: center;
+            line-height: 19px;
+            gap: 15px;
+            color: var(--text-gray);
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            svg {
+                fill: var(--text-gray);
+            }
         }
-      }
-      li:hover {
+        li:hover {
+            background-color: #f4f3f6;
+            color: var(--primary);
+            svg {
+                fill: var(--primary);
+            }
+        }
+        li:last-child {
+            color: var(--primary);
+            svg {
+                fill: var(--primary);
+            }
+        }
+        li:last-child:hover {
+            background-color: var(--primary);
+            color: var(--text-lines);
+            svg {
+                fill: var(--text-lines);
+            }
+        }
+        .active-li {
+            background-color: var(--primary);
+            color: var(--text-lines);
+        }
+    }
+    .active {
         background-color: #f4f3f6;
         color: var(--primary);
         svg {
-          fill: var(--primary);
+            fill: var(--primary);
         }
-      }
-      li:last-child {
-        color: var(--primary);
-        svg {
-          fill: var(--primary);
-        }
-      }
-      li:last-child:hover {
-        background-color: var(--primary);
-        color: var(--text-lines);
-        svg {
-          fill: var(--text-lines);
-        }
-      }
-      .active-li {
-        background-color: var(--primary);
-        color: var(--text-lines);
-      }
     }
-    .active {
-      background-color: #f4f3f6;
-      color: var(--primary);
-      svg {
-        fill: var(--primary);
-      }
-    }
-  }
-  
+}
