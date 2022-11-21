@@ -7,7 +7,8 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "count": "git ls-files --exclude-standard -- ':!:package-lock.json' | xargs wc -l"
     },
     "dependencies": {
         "prettier": "^2.7.1",
