@@ -4,7 +4,7 @@
 
 ## Övergripande
 
-En responsive Kanban board skapad med relevanta verktyg (se nedan). Applikationen består av ca 8 komponenter där vi använder oss utav. I applikationen finns möjlighet att exempelvis se alla sina project, skapa nya tickets, se alla tickets för det olika projekten, förflytta olika tickets mellan olika kolumner.
+En responsive Kanban board skapad med relevanta verktyg (se nedan). Applikationen består av ca 8 komponenter. I applikationen finns möjlighet att exempelvis se alla sina projekt, skapa nya tickets och projekt, se alla tickets för det olika projekten, förflytta olika tickets mellan olika kolumner.
 
 ### Upplägg
 
