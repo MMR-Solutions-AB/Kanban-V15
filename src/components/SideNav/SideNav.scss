@@ -2,7 +2,7 @@
     padding: 10px 0;
     border-right: 1.5px solid #373846;
     border-top: none;
-    min-height: calc(100vh - 98px);
+    min-height: 100vh;
     max-width: 280px;
     background-color: var(--bg-gray);
     width: 100%;
@@ -54,30 +54,6 @@
             svg {
                 fill: var(--primary);
             }
-        }
-        li:last-child {
-            color: var(--primary);
-            svg {
-                fill: var(--primary);
-            }
-        }
-        li:last-child:hover {
-            background-color: var(--primary);
-            color: var(--text-lines);
-            svg {
-                fill: var(--text-lines);
-            }
-        }
-        .active-li {
-            background-color: var(--primary);
-            color: var(--text-lines);
-        }
-    }
-    .active {
-        background-color: #f4f3f6;
-        color: var(--primary);
-        svg {
-            fill: var(--primary);
         }
     }
 }
