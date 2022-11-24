@@ -60,9 +60,8 @@ const Board = () => {
         <div className="board">
             <DragDropContext onDragEnd={(res) => onDragend(res)}>
                 {currentProject.board.map((column, idx) => (
-                    <div id={idx} key={column.id}>
-                        {console.log(column)}
-                        <Droppable key={column.id} droppableId={column.name}>
+                    <div id={idx} key={column.name}>
+                        <Droppable key={column.name} droppableId={column.name}>
                             {(provided, snapshot) => (
                                 <div
                                     {...provided.droppableProps}
