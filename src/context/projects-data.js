@@ -4,8 +4,8 @@ export const projectsData = [
     {
         title: 'Place Board',
         id: 1,
-        board: {
-            stage1: {
+        board: [
+            {
                 name: 'Todo',
                 items: [
                     {
@@ -41,7 +41,7 @@ export const projectsData = [
                     },
                 ],
             },
-            stage2: {
+            {
                 name: 'Doing',
                 items: [
                     {
@@ -60,7 +60,7 @@ export const projectsData = [
                     },
                 ],
             },
-            stage3: {
+            {
                 name: 'Done',
                 items: [
                     {
@@ -84,7 +84,7 @@ export const projectsData = [
                     },
                 ],
             },
-        },
+        ],
     },
     {
         title: 'Jira Board',

@@ -4,67 +4,30 @@ import Ticket from '../Ticket/Ticket'
 import { useProject } from '../../context/ProjectContext'
 
 const Board = () => {
-    const data = useProject()
-    console.log(data)
+    const { currentProject } = useProject()
+    console.log(currentProject)
     return (
         <div className="board">
-            <div className="board-column">
-                <div className="board-title">
-                    <div className="board-title-icon Done"></div>
-                    <h4 className="heading-s">Done</h4>
-                </div>
+            {currentProject.board.map((column) => (
+                <div className="board-column" key={column.name}>
+                    <div className="board-title">
+                        <div
+                            className={`board-title-icon ${column.name}`}
+                        ></div>
+                        <h4 className="heading-s">{column.name}</h4>
+                    </div>
 
-                <Ticket
-                    item={{
-                        id: '1',
-                        title: 'Context Bug',
-                        description:
-                            'This is one of the longest descriptions ever',
-                        tasks: ['Fix types at the same time'],
-                    }}
-                />
-            </div>
-            <div className="board-column">
-                <div className="board-title">
-                    <div className="board-title-icon Todo"></div>
-                    <h4 className="heading-s">Todo</h4>
+                    <Ticket
+                        item={{
+                            id: '1',
+                            title: 'Context Bug',
+                            description:
+                                'This is one of the longest descriptions ever',
+                            tasks: ['Fix types at the same time'],
+                        }}
+                    />
                 </div>
-
-                <Ticket
-                    item={{
-                        id: '2',
-                        title: 'Context Bug',
-                        description:
-                            'This is one of the longest descriptions ever',
-                        tasks: ['Fix types at the same time'],
-                    }}
-                />
-            </div>
-            <div className="board-column">
-                <div className="board-title">
-                    <div className="board-title-icon Doing"></div>
-                    <h4 className="heading-s">Doing</h4>
-                </div>
-
-                <Ticket
-                    item={{
-                        id: '3',
-                        title: 'Context Bug',
-                        description:
-                            'This is one of the longest descriptions ever',
-                        tasks: ['Fix types at the same time'],
-                    }}
-                />
-                <Ticket
-                    item={{
-                        id: '4',
-                        title: 'Context Bug',
-                        description:
-                            'This is one of the longest descriptions ever',
-                        tasks: ['Fix types at the same time'],
-                    }}
-                />
-            </div>
+            ))}
         </div>
     )
 }
