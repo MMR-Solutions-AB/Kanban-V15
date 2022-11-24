@@ -2,11 +2,16 @@ import React from 'react'
 import { useState } from 'react'
 import './Ticket.scss'
 
-const Ticket = ({ ticket }) => {
+const Ticket = ({ provided, snapshot, ticket }) => {
     const [showsubtasks, setShowsubtasks] = useState(false)
 
     return (
         <div
+            ref={provided.innerRef}
+            {...provided.draggableProps}
+            {...provided.dragHandleProps}
+            active={snapshot.isDragging.toString()}
+            style={{ ...provided.draggableProps.style }}
             className="ticket"
             onClick={() => setShowsubtasks((prev) => !prev)}
         >
