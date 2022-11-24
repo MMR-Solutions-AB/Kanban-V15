@@ -1,8 +1,11 @@
 import React from 'react'
 import './Board.scss'
 import Ticket from '../Ticket/Ticket'
+import { useProject } from '../../context/ProjectContext'
 
 const Board = () => {
+    const data = useProject()
+    console.log(data)
     return (
         <div className="board">
             <div className="board-column">

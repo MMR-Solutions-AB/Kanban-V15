@@ -2,6 +2,10 @@
 
 ![alt text](./logo.png)
 
+## Vad görs denna branch
+
+-   Lägger till context för alla projects och boards
+
 ## Övergripande
 
 En responsive Kanban board skapad med relevanta verktyg (se nedan). Applikationen består av ca 8 komponenter. I applikationen finns möjlighet att exempelvis se alla sina projekt, skapa nya tickets och projekt, se alla tickets för det olika projekten, förflytta olika tickets mellan olika kolumner.
