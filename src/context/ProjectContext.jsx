@@ -15,6 +15,12 @@ const ProjectProvider = ({ children }) => {
 
     console.log(currentProject)
 
+    const addTicket = (ticket) => {
+        projects[currentIndex].board[0].tickets.push(ticket)
+        // make sure we rerender
+        setProjects([...projects])
+    }
+
     const changeBoard = (index) => {
         setCurrentIndex(index)
     }
@@ -47,6 +53,7 @@ const ProjectProvider = ({ children }) => {
     const value = {
         currentProject,
         projects,
+        addTicket,
         changeBoard,
         addNewProject,
     }

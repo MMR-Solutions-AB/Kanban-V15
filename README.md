@@ -4,8 +4,7 @@
 
 ## Vad görs denna branch
 
--   Skapade en navbar
--   Gjorde navbar:en och resterande av sidan responsiv
+-   Skapade en dropdown för att välja projekt på mobil och en popup/model för att skapa en task
 
 ## Övergripande
 
