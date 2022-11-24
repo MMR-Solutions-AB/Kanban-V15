@@ -7,7 +7,7 @@ export const projectsData = [
         board: [
             {
                 name: 'Todo',
-                items: [
+                tickets: [
                     {
                         id: uuidv4(),
                         title: 'Context Bug',
@@ -43,7 +43,7 @@ export const projectsData = [
             },
             {
                 name: 'Doing',
-                items: [
+                tickets: [
                     {
                         id: uuidv4(),
                         title: 'Portal for modals',
@@ -62,7 +62,7 @@ export const projectsData = [
             },
             {
                 name: 'Done',
-                items: [
+                tickets: [
                     {
                         id: uuidv4(),
                         title: 'Context Bug',
@@ -92,7 +92,7 @@ export const projectsData = [
         board: {
             stage1: {
                 name: 'Todo',
-                items: [
+                tickets: [
                     {
                         id: uuidv4(),
                         title: 'Test Bug',
@@ -104,7 +104,7 @@ export const projectsData = [
             },
             stage2: {
                 name: 'Doing',
-                items: [
+                tickets: [
                     {
                         id: uuidv4(),
                         title: 'Portal for modals',
@@ -118,7 +118,7 @@ export const projectsData = [
             },
             stage3: {
                 name: 'Done',
-                items: [
+                tickets: [
                     {
                         id: uuidv4(),
                         title: 'Datalake team need config',

@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './Ticket.scss'
 
-const Ticket = ({ item }) => {
+const Ticket = ({ ticket }) => {
     const [showsubtasks, setShowsubtasks] = useState(false)
 
     return (
@@ -10,13 +10,13 @@ const Ticket = ({ item }) => {
             className="ticket"
             onClick={() => setShowsubtasks((prev) => !prev)}
         >
-            <h3 className="heading-m">{item.title}</h3>
-            <p className="body-m">{item.description}</p>
-            <p className="body-m">{item.tasks.length} subtasks</p>
+            <h3 className="heading-m">{ticket.title}</h3>
+            <p className="body-m">{ticket.description}</p>
+            <p className="body-m">{ticket.tasks.length} subtasks</p>
             <ul>
                 {showsubtasks &&
-                    item.tasks.map((item) => {
-                        return <li key={item}>{item}</li>
+                    ticket.tasks.map((ticket) => {
+                        return <li key={ticket}>{ticket}</li>
                     })}
             </ul>
         </div>

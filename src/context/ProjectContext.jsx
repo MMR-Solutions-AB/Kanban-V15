@@ -13,12 +13,7 @@ const ProjectProvider = ({ children }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const currentProject = projects[currentIndex]
 
-    const changeBoard = (index) => {
-        setCurrentIndex(index)
-    }
-
     const value = {
-        changeBoard,
         currentProject,
         projects,
     }
