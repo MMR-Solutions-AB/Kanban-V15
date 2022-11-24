@@ -50,10 +50,16 @@ const ProjectProvider = ({ children }) => {
         setCurrentIndex(projects.length)
     }
 
+    const changeCurrentBoard = (newData) => {
+        projects[currentIndex].board = newData
+        setProjects([...projects])
+    }
+
     const value = {
         currentProject,
         projects,
         addTicket,
+        changeCurrentBoard,
         changeBoard,
         addNewProject,
     }

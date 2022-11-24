@@ -4,7 +4,7 @@
 
 ## Vad görs denna branch
 
--   Skapade en dropdown för att välja projekt på mobil och en popup/model för att skapa en task
+-   La till drag and drop funktionaliteten
 
 ## Övergripande
 
