@@ -4,7 +4,7 @@
 
 ## Vad görs denna branch
 
--   Lägger till context för alla projects och boards
+-   Lägger till funktionalitet att byta projekt och skapa nya projekt
 
 ## Övergripande
 

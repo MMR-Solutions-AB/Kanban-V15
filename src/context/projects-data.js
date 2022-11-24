@@ -89,8 +89,8 @@ export const projectsData = [
     {
         title: 'Jira Board',
         id: 2,
-        board: {
-            stage1: {
+        board: [
+            {
                 name: 'Todo',
                 tickets: [
                     {
@@ -102,7 +102,7 @@ export const projectsData = [
                     },
                 ],
             },
-            stage2: {
+            {
                 name: 'Doing',
                 tickets: [
                     {
@@ -116,7 +116,7 @@ export const projectsData = [
                     },
                 ],
             },
-            stage3: {
+            {
                 name: 'Done',
                 tickets: [
                     {
@@ -133,6 +133,6 @@ export const projectsData = [
                     },
                 ],
             },
-        },
+        ],
     },
 ]
