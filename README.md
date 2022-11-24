@@ -4,7 +4,8 @@
 
 ## Vad görs denna branch
 
--   Lägger till funktionalitet att byta projekt och skapa nya projekt
+-   Skapade en navbar
+-   Gjorde navbar:en och resterande av sidan responsiv
 
 ## Övergripande
 
