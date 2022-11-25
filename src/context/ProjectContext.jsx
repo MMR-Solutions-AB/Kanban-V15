@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { createContext } from 'react'
 import { projectsData } from './projects-data'
+import { useLocalStorage } from '../hooks/useLocalStorage'
 
 const ProjectContext = createContext({})
 
@@ -9,7 +10,7 @@ export function useProject() {
 }
 
 const ProjectProvider = ({ children }) => {
-    const [projects, setProjects] = useState(projectsData)
+    const [projects, setProjects] = useLocalStorage('projects', projectsData)
     const [currentIndex, setCurrentIndex] = useState(0)
     const currentProject = projects[currentIndex]
 
