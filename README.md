@@ -1,41 +1,23 @@
-# Kanban
+# Local storage uppgift
 
-![alt text](./logo.png)
+Denna uppgift kommer fokusera på att bygga vår allra första egna hook för att spara alla våra project och tickets permanent
 
-## Vad görs denna branch
+## Din uppgift
 
--   Skapade en dropdown för att välja projekt på mobil och en popup/model för att skapa en task
+Denna uppgift ska du göra när du är klar med [F6](https://github.com/MMR-Solutions-AB/Kanban-V15/tree/F6) branchen. Uppgiften går ut på att skapa en egen hook som ska heta **useLocalStorage** som du ska använda istället för **useState**
 
-## Övergripande
+### Steg att ta
 
-En responsive Kanban board skapad med relevanta verktyg (se nedan). Applikationen består av ca 8 komponenter. I applikationen finns möjlighet att exempelvis se alla sina projekt, skapa nya tickets och projekt, se alla tickets för det olika projekten, förflytta olika tickets mellan olika kolumner.
+-   Skapa en **hooks** mapp i **src** mappen och i den ny skapade mappen kan du skapa en ny fil som heter **useLocalStorage.jsx**
+-   **useLocalStorage** hooken går ut på kommunicera med local storage (vilket är som en super simpel liten databas i vår browser) och läsa samt skriva till den, så att kolla in på vad local storage är och hur man använder det i Javascript är ett bra steg att ta!
+-   I din **context/ProjectContext.jsx** ska du ändra raden som skapar state med hjälp av **useState** hooken till att använda din ny skapade hook. Alltså
 
-### Upplägg
+```jsx
+const [projects, setProjects] = useState(projectsData)
+// ska bli till
+const [projects, setProjects] = useLocalStorage(/* Vad ska stå här 🤔 */)
+```
 
-Kanban projektet kommer byggas under 5 dagar med 2 föreläsningar per dag. Varje föreläsning kommer fokusera på att bygga ut vissa delar i taget. För varje föreläsning finns en motsvarande **Branch** och **Pull request** som har namn som exempelvis **F1** för **föreläsning 1**, du hittar alla **Pull requests** [här](https://github.com/MMR-Solutions-AB/Kanban-V15/pulls). Vill du se vad som gjordes en specifik föreläsning är det bara att tryck på respektive **Pull request** för den föreläsningen. Det finns även ett par **Pull requests** och **Branches** som inte har namn som exempelvis **F1**, dessa är extra uppgifter som du ska göra utöver föreläsningar. Du hittar all info om vad som ska göras i **README.md** filen i den branchen.
+### Tips
 
-### Starta Applikationen
-
-För att starta projektet, är det t å saker du behöver göra.
-
-1. Se till att du har laddat ner **node_modules**
-2. När du har laddat ner **node_modules** är det bara att köra **npm run dev** i terminalen och sen öppna [http://127.0.0.1:5173/](http://127.0.0.1:5173/)
-
-### Verktyg
-
-Applikationen använder följande Node module paket
-
--   React
--   React context
--   SCSS
--   Drag and drop
-
-### Dokumentation:
-
--   [React](https://beta.reactjs.org/)
--   [React context](https://redux-toolkit.js.org/introduction/getting-started)
--   [SCSS](https://sass-lang.com/documentation/)
-
-## Live demo
-
-Om du vill se hur den färdiga sidan ska se hut kan du göra det [här](https://voluble-figolla-55bb8e.netlify.app/)
+-   Du ska enbart röra **hooks/useLocalStorage.jsx** och **context/ProjectContext.jsx** filerna, inga andra filer ska skapas eller ändras för denna uppgift
